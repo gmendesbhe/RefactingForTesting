@@ -1,1 +1,2 @@
 C:\Users\3152215960\Downloads\TesteUnitario\RefactingForTesting\RefactingForTesting\bin\Debug\RefactingForTesting.exe.config
+C:\Users\3152215960\Desktop\RefactingForTesting\RefactingForTesting\RefactingForTesting\bin\Debug\RefactingForTesting.exe.config
