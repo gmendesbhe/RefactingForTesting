@@ -14,11 +14,6 @@ namespace RefactingForTesting
             {
                 return 3;
             }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
         }
 
         public decimal CalcularBonus(decimal aSalario)

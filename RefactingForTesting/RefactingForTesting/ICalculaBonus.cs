@@ -9,6 +9,6 @@ namespace RefactingForTesting
     public interface ICalculaBonus
     {
         decimal CalcularBonus(int aTempoCasa, decimal aValor);
-        Dictionary<BancoEnum, decimal> CalculaBonusPorBanco(IEnumerable<IGrouping<BancoEnum, Funcionario>> aLista);
+        Dictionary<BancoEnum, decimal> CalculaBonusPorBanco(IEnumerable<IGrouping<BancoEnum, Funcionario>> aLista, DateTime hoje);
     }
 }

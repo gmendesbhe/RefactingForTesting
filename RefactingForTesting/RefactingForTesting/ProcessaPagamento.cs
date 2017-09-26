@@ -26,7 +26,7 @@ namespace RefactingForTesting
 
             //using (var f = File.CreateText(nomeArquivo))
             //{
-            var dic = aCalculaBonus.CalculaBonusPorBanco(listaAgrupada);
+            var dic = aCalculaBonus.CalculaBonusPorBanco(listaAgrupada, DataHj);
             foreach (var item in dic)
             {
                 gravarArquivo.WriteLine($"{item.Key}:{item.Value}");
