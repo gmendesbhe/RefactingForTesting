@@ -1,2 +1,3 @@
 C:\Users\3152215960\Downloads\TesteUnitario\RefactingForTesting\RefactingForTesting\bin\Debug\RefactingForTesting.exe.config
 C:\Users\3152215960\Desktop\RefactingForTesting\RefactingForTesting\RefactingForTesting\bin\Debug\RefactingForTesting.exe.config
+C:\Users\31522493\Downloads\OneDrive-2017-09-26\Prova Arquitetura\RefactingForTesting\RefactingForTesting\RefactingForTesting\bin\Debug\RefactingForTesting.exe.config

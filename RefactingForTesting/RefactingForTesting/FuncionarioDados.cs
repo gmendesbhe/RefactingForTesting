@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace RefactingForTesting
 {
 
-    public enum BancoEnum { Itau, Bradesco, Caixa}
+    public enum BancoEnum { Itau, Bradesco, Caixa }
     public class Funcionario
     {
         public int Codigo { get; set; }
@@ -21,41 +21,51 @@ namespace RefactingForTesting
 
     public class FuncionarioDados
     {
-        public List<Funcionario> BuscarFuncionarios()
+        public List<Funcionario> BuscarFuncionarios(StreamReader funcionarios)
         {
             List<Funcionario> result = new List<Funcionario>();
-            using(var f = File.OpenText("func.csv"))
+            //using (var f = File.OpenText("func.csv"))
+            //{
+            //Primeira linha é cabeçalho
+            funcionarios.ReadLine();
+            var linha = funcionarios.ReadLine();
+            while (linha != null)
             {
-                //Primeira linha é cabeçalho
-                f.ReadLine();
-                var linha = f.ReadLine();
-                while(linha != null)
+                var colunas = linha.Split(';');
+                var codigo = int.Parse(colunas[0].Trim());
+                var nome = colunas[1].Trim();
+                var salario = decimal.Parse(colunas[2].Trim(), System.Globalization.CultureInfo.GetCultureInfo("pt-br"));
+                var admissao = DateTime.Parse(colunas[3].Trim(), System.Globalization.CultureInfo.GetCultureInfo("pt-br"));
+                var demitido = colunas[4].Trim() == "S";
+                var banco = (BancoEnum)Enum.Parse(typeof(BancoEnum), colunas[5].Trim());
+
+                var funcionario = new Funcionario()
                 {
-                    var colunas = linha.Split(';');
-                    var codigo = int.Parse(colunas[0].Trim());
-                    var nome = colunas[1].Trim();
-                    var salario = decimal.Parse(colunas[2].Trim(), System.Globalization.CultureInfo.GetCultureInfo("pt-br"));
-                    var admissao = DateTime.Parse(colunas[3].Trim(), System.Globalization.CultureInfo.GetCultureInfo("pt-br"));
-                    var demitido = colunas[4].Trim() == "S";
-                    var banco = (BancoEnum)Enum.Parse(typeof(BancoEnum), colunas[5].Trim());
+                    Codigo = codigo,
+                    Nome = nome,
+                    Salario = salario,
+                    Admissao = admissao,
+                    Demitido = demitido,
+                    Banco = banco
+                };
 
-                    var funcionario = new Funcionario()
-                    {
-                        Codigo = codigo,
-                        Nome = nome,
-                        Salario = salario,
-                        Admissao = admissao,
-                        Demitido = demitido,
-                        Banco = banco
-                    };
+                result.Add(funcionario);
 
-                    result.Add(funcionario);
-
-                    linha = f.ReadLine();
-                }
+                linha = funcionarios.ReadLine();
             }
+            //}
 
             return result;
+        }
+
+        public IEnumerable<Funcionario> FuncionariosAtivos(IEnumerable<Funcionario> listaFuncionarios)
+        {
+            return listaFuncionarios.Where(f => !f.Demitido);
+        }
+
+        public IEnumerable<IGrouping<BancoEnum, Funcionario>> FuncionariosAgrupBanco(IEnumerable<Funcionario> listaFuncionarios)
+        {
+            return listaFuncionarios.GroupBy(f => f.Banco);
         }
     }
 }
