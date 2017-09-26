@@ -12,7 +12,14 @@ namespace RefactingForTesting
         static void Main(string[] args)
         {
             var proc = new ProcessaPagamento();
-            proc.GerarArquivoConsolidadoPagamento(new FuncionarioDados(), DateTime.Now, new StreamReader("c:\\temp\\depositos.csv"), new StreamWriter("c:\\temp\\depositos.csv"));
+            var list = new List<IBonus>()
+            {
+                new Bonus10anos(),
+                new Bonus3anos(),
+                new Bonus5anos(),
+                new BonusGeral()
+            };
+            proc.GerarArquivoConsolidadoPagamento(new FuncionarioDados(), DateTime.Now,new CalculaBonus(list), new StreamReader("c:\\temp\\depositos.csv"), new StreamWriter("c:\\temp\\depositos.csv"));
             //proc.GerarArquivoConsolidadoPagamento("c:\\temp\\depositos.csv");
 
 
