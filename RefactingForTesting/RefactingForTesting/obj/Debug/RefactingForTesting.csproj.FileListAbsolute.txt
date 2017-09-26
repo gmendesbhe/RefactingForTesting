@@ -11,3 +11,9 @@ C:\Users\31522493\Downloads\OneDrive-2017-09-26\Prova Arquitetura\RefactingForTe
 C:\Users\31522493\Downloads\OneDrive-2017-09-26\Prova Arquitetura\RefactingForTesting\RefactingForTesting\RefactingForTesting\bin\Debug\RefactingForTesting.exe.config
 C:\Users\31522493\Downloads\OneDrive-2017-09-26\Prova Arquitetura\RefactingForTesting\RefactingForTesting\RefactingForTesting\bin\Debug\RefactingForTesting.exe
 C:\Users\31522493\Downloads\OneDrive-2017-09-26\Prova Arquitetura\RefactingForTesting\RefactingForTesting\RefactingForTesting\bin\Debug\RefactingForTesting.pdb
+D:\RefactingForTesting\RefactingForTesting\RefactingForTesting\bin\Debug\RefactingForTesting.exe.config
+D:\RefactingForTesting\RefactingForTesting\RefactingForTesting\bin\Debug\RefactingForTesting.exe
+D:\RefactingForTesting\RefactingForTesting\RefactingForTesting\bin\Debug\RefactingForTesting.pdb
+D:\RefactingForTesting\RefactingForTesting\RefactingForTesting\obj\Debug\RefactingForTesting.csprojResolveAssemblyReference.cache
+D:\RefactingForTesting\RefactingForTesting\RefactingForTesting\obj\Debug\RefactingForTesting.exe
+D:\RefactingForTesting\RefactingForTesting\RefactingForTesting\obj\Debug\RefactingForTesting.pdb

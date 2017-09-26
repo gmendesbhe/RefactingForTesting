@@ -8,3 +8,13 @@ C:\Users\3152215960\Desktop\RefactingForTesting\RefactingForTesting\UnitTestProj
 C:\Users\3152215960\Desktop\RefactingForTesting\RefactingForTesting\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
 C:\Users\3152215960\Desktop\RefactingForTesting\RefactingForTesting\UnitTestProject1\obj\Debug\UnitTestProject1.dll
 C:\Users\3152215960\Desktop\RefactingForTesting\RefactingForTesting\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
+D:\RefactingForTesting\RefactingForTesting\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+D:\RefactingForTesting\RefactingForTesting\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+D:\RefactingForTesting\RefactingForTesting\UnitTestProject1\bin\Debug\Castle.Core.dll
+D:\RefactingForTesting\RefactingForTesting\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\RefactingForTesting\RefactingForTesting\UnitTestProject1\bin\Debug\Moq.dll
+D:\RefactingForTesting\RefactingForTesting\UnitTestProject1\bin\Debug\Moq.pdb
+D:\RefactingForTesting\RefactingForTesting\UnitTestProject1\bin\Debug\Moq.xml
+D:\RefactingForTesting\RefactingForTesting\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
+D:\RefactingForTesting\RefactingForTesting\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+D:\RefactingForTesting\RefactingForTesting\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
