@@ -12,7 +12,7 @@ namespace RefactingForTesting
         {
 
             var proc = new ProcessaPagamento();
-            proc.GerarArquivoConsolidadoPagamento("c:\\temp\\depositos.csv");
+            //proc.GerarArquivoConsolidadoPagamento("c:\\temp\\depositos.csv");
 
 
         }
