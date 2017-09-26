@@ -44,7 +44,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bonus10anos.cs" />
+    <Compile Include="Bonus3anos.cs" />
+    <Compile Include="Bonus5anos.cs" />
+    <Compile Include="BonusGeral.cs" />
+    <Compile Include="CalculaBonus.cs" />
     <Compile Include="FuncionarioDados.cs" />
+    <Compile Include="IBonus.cs" />
+    <Compile Include="ICalculaBonus.cs" />
     <Compile Include="ProcessaPagamento.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
