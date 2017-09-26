@@ -10,7 +10,7 @@ namespace RefactingForTesting
     public class ProcessaPagamento
     {
 
-        public void GerarArquivoConsolidadoPagamento(FuncionarioDados dados, DateTime DataHj, StreamReader funcionarios, StreamWriter gravarArquivo)
+        public void GerarArquivoConsolidadoPagamento(FuncionarioDados dados, DateTime DataHj, ICalculaBonus aCalculaBonus, StreamReader funcionarios, StreamWriter gravarArquivo)
         {
             //FuncionarioDados dados = new FuncionarioDados();
             var lista = dados.BuscarFuncionarios(funcionarios);
@@ -26,28 +26,33 @@ namespace RefactingForTesting
 
             //using (var f = File.CreateText(nomeArquivo))
             //{
-            foreach (var banco in listaAgrupada)
+            var dic = aCalculaBonus.CalculaBonusPorBanco(listaAgrupada);
+            foreach (var item in dic)
             {
-                var valor = 0M;
-                foreach (var func in banco)
-                {
-                    var bonus = 0.0M;
-                    var tempoDeCasa = DataHj.Year - func.Admissao.Year;
-                    if (tempoDeCasa < 3)
-                        bonus = 0;
-                    else
-                            if (tempoDeCasa < 5)
-                        bonus = 0.03M;
-                    else
-                                if (tempoDeCasa < 10)
-                        bonus = 0.05M;
-                    else
-                        bonus = 0.1M;
-
-                    valor += Math.Round(func.Salario * bonus, 2);
-                }
-                gravarArquivo.WriteLine($"{banco.Key};{valor}");
+                gravarArquivo.WriteLine($"{item.Key}:{item.Value}");
             }
+            //foreach (var banco in listaAgrupada)
+            //{
+            //    var valor = 0M;
+            //    foreach (var func in banco)
+            //    {
+            //        var bonus = 0.0M;
+            //        var tempoDeCasa = DataHj.Year - func.Admissao.Year;
+            //        if (tempoDeCasa < 3)
+            //            bonus = 0;
+            //        else
+            //                if (tempoDeCasa < 5)
+            //            bonus = 0.03M;
+            //        else
+            //                    if (tempoDeCasa < 10)
+            //            bonus = 0.05M;
+            //        else
+            //            bonus = 0.1M;
+
+            //        valor += Math.Round(func.Salario * bonus, 2);
+            //    }
+            //    gravarArquivo.WriteLine($"{banco.Key};{valor}");
+            //}
             //}
 
 
