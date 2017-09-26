@@ -19,7 +19,7 @@ namespace RefactingForTesting
                 new Bonus5anos(),
                 new BonusGeral()
             };
-            proc.GerarArquivoConsolidadoPagamento(new FuncionarioDados(), DateTime.Now,new CalculaBonus(list), new StreamReader("c:\\temp\\depositos.csv"), new StreamWriter("c:\\temp\\depositos.csv"));
+            proc.GerarArquivoConsolidadoPagamento(new FuncionarioDados(), DateTime.Now,new CalculaBonus(list), new StreamReader(@"..\func.csv"), new StreamWriter(@"c:\temp\depositos.csv"));
             //proc.GerarArquivoConsolidadoPagamento("c:\\temp\\depositos.csv");
 
 
