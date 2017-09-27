@@ -18,3 +18,13 @@ D:\RefactingForTesting\RefactingForTesting\UnitTestProject1\bin\Debug\Moq.xml
 D:\RefactingForTesting\RefactingForTesting\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
 D:\RefactingForTesting\RefactingForTesting\UnitTestProject1\obj\Debug\UnitTestProject1.dll
 D:\RefactingForTesting\RefactingForTesting\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
+C:\Users\gmend\Source\Repos\RefactingForTesting\RefactingForTesting\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+C:\Users\gmend\Source\Repos\RefactingForTesting\RefactingForTesting\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+C:\Users\gmend\Source\Repos\RefactingForTesting\RefactingForTesting\UnitTestProject1\bin\Debug\Castle.Core.dll
+C:\Users\gmend\Source\Repos\RefactingForTesting\RefactingForTesting\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\gmend\Source\Repos\RefactingForTesting\RefactingForTesting\UnitTestProject1\bin\Debug\Moq.dll
+C:\Users\gmend\Source\Repos\RefactingForTesting\RefactingForTesting\UnitTestProject1\bin\Debug\Moq.pdb
+C:\Users\gmend\Source\Repos\RefactingForTesting\RefactingForTesting\UnitTestProject1\bin\Debug\Moq.xml
+C:\Users\gmend\Source\Repos\RefactingForTesting\RefactingForTesting\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
+C:\Users\gmend\Source\Repos\RefactingForTesting\RefactingForTesting\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+C:\Users\gmend\Source\Repos\RefactingForTesting\RefactingForTesting\UnitTestProject1\obj\Debug\UnitTestProject1.pdb

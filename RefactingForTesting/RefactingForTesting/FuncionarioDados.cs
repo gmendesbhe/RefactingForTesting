@@ -24,8 +24,6 @@ namespace RefactingForTesting
         public List<Funcionario> BuscarFuncionarios(StreamReader funcionarios)
         {
             List<Funcionario> result = new List<Funcionario>();
-            //using (var f = File.OpenText("func.csv"))
-            //{
             //Primeira linha é cabeçalho
             funcionarios.ReadLine();
             var linha = funcionarios.ReadLine();
@@ -53,7 +51,6 @@ namespace RefactingForTesting
 
                 linha = funcionarios.ReadLine();
             }
-            //}
 
             return result;
         }

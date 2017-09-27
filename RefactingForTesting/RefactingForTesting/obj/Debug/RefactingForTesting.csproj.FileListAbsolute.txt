@@ -17,3 +17,9 @@ D:\RefactingForTesting\RefactingForTesting\RefactingForTesting\bin\Debug\Refacti
 D:\RefactingForTesting\RefactingForTesting\RefactingForTesting\obj\Debug\RefactingForTesting.csprojResolveAssemblyReference.cache
 D:\RefactingForTesting\RefactingForTesting\RefactingForTesting\obj\Debug\RefactingForTesting.exe
 D:\RefactingForTesting\RefactingForTesting\RefactingForTesting\obj\Debug\RefactingForTesting.pdb
+C:\Users\gmend\Source\Repos\RefactingForTesting\RefactingForTesting\RefactingForTesting\bin\Debug\RefactingForTesting.exe.config
+C:\Users\gmend\Source\Repos\RefactingForTesting\RefactingForTesting\RefactingForTesting\obj\Debug\RefactingForTesting.exe
+C:\Users\gmend\Source\Repos\RefactingForTesting\RefactingForTesting\RefactingForTesting\obj\Debug\RefactingForTesting.pdb
+C:\Users\gmend\Source\Repos\RefactingForTesting\RefactingForTesting\RefactingForTesting\bin\Debug\RefactingForTesting.exe
+C:\Users\gmend\Source\Repos\RefactingForTesting\RefactingForTesting\RefactingForTesting\bin\Debug\RefactingForTesting.pdb
+C:\Users\gmend\Source\Repos\RefactingForTesting\RefactingForTesting\RefactingForTesting\obj\Debug\RefactingForTesting.csprojResolveAssemblyReference.cache

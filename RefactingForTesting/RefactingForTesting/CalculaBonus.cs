@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RefactingForTesting
 {
-    public class CalculaBonus:ICalculaBonus
+    public class CalculaBonus : ICalculaBonus
     {
         IEnumerable<IBonus> listaBonus;
         public CalculaBonus(IEnumerable<IBonus> aListaBonus)
@@ -14,12 +14,12 @@ namespace RefactingForTesting
             listaBonus = aListaBonus.OrderBy(b => b.TempoCasa);
         }
 
-        public decimal CalcularBonus(int aTempoCasa, decimal aValor)
+        private decimal CalcularBonus(int aTempoCasa, decimal aValor)
         {
             return listaBonus.FirstOrDefault(b => aTempoCasa < b.TempoCasa).CalcularBonus(aValor);
         }
 
-        public Dictionary<BancoEnum, decimal> CalculaBonusPorBanco(IEnumerable<IGrouping<BancoEnum, Funcionario>> aLista,DateTime hoje)
+        public Dictionary<BancoEnum, decimal> CalculaBonusPorBanco(IEnumerable<IGrouping<BancoEnum, Funcionario>> aLista, DateTime hoje)
         {
             var retorno = new Dictionary<BancoEnum, decimal>();
             foreach (var banco in aLista)

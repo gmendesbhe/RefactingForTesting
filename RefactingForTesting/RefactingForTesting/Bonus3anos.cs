@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RefactingForTesting
 {
-    class Bonus3anos : IBonus
+    public class Bonus3anos : IBonus
     {
         public int TempoCasa
         {
