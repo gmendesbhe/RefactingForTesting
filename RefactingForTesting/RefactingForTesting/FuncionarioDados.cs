@@ -18,15 +18,21 @@ namespace RefactingForTesting
         public bool Demitido { get; set; }
         public BancoEnum Banco { get; set; }
     }
+    public interface IFuncionarioDados
+    {
+        List<Funcionario> BuscarFuncionarios();
+        IEnumerable<Funcionario> FuncionariosAtivos(IEnumerable<Funcionario> listaFuncionarios);
+        IEnumerable<IGrouping<BancoEnum, Funcionario>> FuncionariosAgrupBanco(IEnumerable<Funcionario> listaFuncionarios);
+    }
 
-    public class FuncionarioDados
+    public class FuncionarioDados : IFuncionarioDados
     {
         private ILerArquivo _BaseFuncionarios;
         public FuncionarioDados(ILerArquivo aBaseFuncionarios)
         {
             this._BaseFuncionarios = aBaseFuncionarios;
         }
-        public virtual List<Funcionario> BuscarFuncionarios()
+        public List<Funcionario> BuscarFuncionarios()
         {
             List<Funcionario> result = new List<Funcionario>();
             //Primeira linha é cabeçalho
@@ -60,12 +66,12 @@ namespace RefactingForTesting
             return result;
         }
 
-        public virtual IEnumerable<Funcionario> FuncionariosAtivos(IEnumerable<Funcionario> listaFuncionarios)
+        public IEnumerable<Funcionario> FuncionariosAtivos(IEnumerable<Funcionario> listaFuncionarios)
         {
             return listaFuncionarios.Where(f => !f.Demitido);
         }
 
-        public virtual IEnumerable<IGrouping<BancoEnum, Funcionario>> FuncionariosAgrupBanco(IEnumerable<Funcionario> listaFuncionarios)
+        public IEnumerable<IGrouping<BancoEnum, Funcionario>> FuncionariosAgrupBanco(IEnumerable<Funcionario> listaFuncionarios)
         {
             return listaFuncionarios.GroupBy(f => f.Banco);
         }

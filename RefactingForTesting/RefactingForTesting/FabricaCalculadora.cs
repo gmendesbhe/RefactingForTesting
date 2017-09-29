@@ -2,21 +2,19 @@
 
 namespace RefactingForTesting
 {
-    internal class FabricaCalculadora
+    public class FabricaCalculadora
     {
-        public FabricaCalculadora()
+        public ICalculaBonus Calculadora
         {
-        }
-
-        public ICalculaBonus Calculadora { get
+            get
             {
                 var list = new List<IBonus>()
-            {
-                new Bonus10anos(),
-                new Bonus3anos(),
-                new Bonus5anos(),
-                new BonusGeral()
-            };
+                {
+                    new Bonus10anos(),
+                    new Bonus3anos(),
+                    new Bonus5anos(),
+                    new BonusGeral()
+                };
                 return new CalculaBonus(list);
             }
         }

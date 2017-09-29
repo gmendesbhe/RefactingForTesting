@@ -10,7 +10,7 @@ namespace RefactingForTesting
     public class ProcessaPagamento
     {
 
-        public void GerarArquivoConsolidadoPagamento(FuncionarioDados dados, DateTime DataHj, ICalculaBonus aCalculaBonus, IEscreveArquivo gravarArquivo)
+        public void GerarArquivoConsolidadoPagamento(IFuncionarioDados dados, DateTime DataHj, ICalculaBonus aCalculaBonus, IEscreveArquivo gravarArquivo)
         {
             var lista = dados.BuscarFuncionarios();
 

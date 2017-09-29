@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefactingForTesting", "RefactingForTesting\RefactingForTesting.csproj", "{757453F2-4AA5-4EEF-AFC2-D3DBD8C49AF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{E8CA5AB4-68D5-4CB2-8509-7407C8FE2943}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefactingForTestingTests", "UnitTestProject1\RefactingForTestingTests.csproj", "{E8CA5AB4-68D5-4CB2-8509-7407C8FE2943}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
