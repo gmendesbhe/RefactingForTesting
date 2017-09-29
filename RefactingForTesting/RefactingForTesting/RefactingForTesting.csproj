@@ -44,14 +44,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EscreverArquivo.cs" />
+    <Compile Include="FabricaCalculadora.cs" />
+    <Compile Include="FabricaWriter.cs" />
+    <Compile Include="LerArquivo.cs" />
     <Compile Include="Bonus10anos.cs" />
     <Compile Include="Bonus3anos.cs" />
     <Compile Include="Bonus5anos.cs" />
     <Compile Include="BonusGeral.cs" />
     <Compile Include="CalculaBonus.cs" />
+    <Compile Include="FabricaDados.cs" />
     <Compile Include="FuncionarioDados.cs" />
     <Compile Include="IBonus.cs" />
     <Compile Include="ICalculaBonus.cs" />
+    <Compile Include="IEscreveArquivo.cs" />
+    <Compile Include="ILerArquivo.cs" />
     <Compile Include="ProcessaPagamento.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

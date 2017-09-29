@@ -21,12 +21,17 @@ namespace RefactingForTesting
 
     public class FuncionarioDados
     {
-        public List<Funcionario> BuscarFuncionarios(StreamReader funcionarios)
+        private ILerArquivo _BaseFuncionarios;
+        public FuncionarioDados(ILerArquivo aBaseFuncionarios)
+        {
+            this._BaseFuncionarios = aBaseFuncionarios;
+        }
+        public virtual List<Funcionario> BuscarFuncionarios()
         {
             List<Funcionario> result = new List<Funcionario>();
             //Primeira linha é cabeçalho
-            funcionarios.ReadLine();
-            var linha = funcionarios.ReadLine();
+            this._BaseFuncionarios.ReadLine();
+            var linha = this._BaseFuncionarios.ReadLine();
             while (linha != null)
             {
                 var colunas = linha.Split(';');
@@ -49,18 +54,18 @@ namespace RefactingForTesting
 
                 result.Add(funcionario);
 
-                linha = funcionarios.ReadLine();
+                linha = this._BaseFuncionarios.ReadLine();
             }
 
             return result;
         }
 
-        public IEnumerable<Funcionario> FuncionariosAtivos(IEnumerable<Funcionario> listaFuncionarios)
+        public virtual IEnumerable<Funcionario> FuncionariosAtivos(IEnumerable<Funcionario> listaFuncionarios)
         {
             return listaFuncionarios.Where(f => !f.Demitido);
         }
 
-        public IEnumerable<IGrouping<BancoEnum, Funcionario>> FuncionariosAgrupBanco(IEnumerable<Funcionario> listaFuncionarios)
+        public virtual IEnumerable<IGrouping<BancoEnum, Funcionario>> FuncionariosAgrupBanco(IEnumerable<Funcionario> listaFuncionarios)
         {
             return listaFuncionarios.GroupBy(f => f.Banco);
         }

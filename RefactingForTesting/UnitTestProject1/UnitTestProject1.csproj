@@ -64,6 +64,12 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RefactingForTesting\RefactingForTesting.csproj">
+      <Project>{757453f2-4aa5-4eef-afc2-d3dbd8c49af5}</Project>
+      <Name>RefactingForTesting</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
