@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RefactingForTesting
 {
-    public interface ILerArquivo
+    public interface ILerArquivo:IDisposable
     {
         string ReadLine();
     }

@@ -17,8 +17,26 @@ namespace RefactingForTesting
         public DateTime Admissao { get; set; }
         public bool Demitido { get; set; }
         public BancoEnum Banco { get; set; }
+        public override bool Equals(object obj)
+        {
+            var item = obj as Funcionario;
+            if (item == null)
+            {
+                return false;
+            }
+            return this.Admissao == item.Admissao
+                && this.Banco == item.Banco
+                && this.Codigo==item.Codigo
+                && this.Demitido==item.Demitido
+                &&this.Nome==item.Nome
+                && this.Salario==item.Salario;
+        }
+        public override int GetHashCode()
+        {
+            return (int)(Codigo*Salario);
+        }
     }
-    public interface IFuncionarioDados
+    public interface IFuncionarioDados : IDisposable
     {
         List<Funcionario> BuscarFuncionarios();
         IEnumerable<Funcionario> FuncionariosAtivos(IEnumerable<Funcionario> listaFuncionarios);
@@ -75,5 +93,26 @@ namespace RefactingForTesting
         {
             return listaFuncionarios.GroupBy(f => f.Banco);
         }
+
+        #region IDisposable Support
+        private bool disposedValue = false;
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposedValue)
+            {
+                if (disposing)
+                {
+                    this._BaseFuncionarios.Dispose();
+                }
+
+                disposedValue = true;
+            }
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+        #endregion
     }
 }

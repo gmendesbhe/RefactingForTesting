@@ -15,9 +15,13 @@ namespace RefactingForTesting
             var dados = new FabricaDados().Dados;
             var arquivo = new FabricaWriter().Writer;
             var calculadora = new FabricaCalculadora().Calculadora;
-            
-
-            proc.GerarArquivoConsolidadoPagamento(dados, DateTime.Now, calculadora,arquivo);
+            using (dados)
+            {
+                using (arquivo)
+                {
+                    proc.GerarArquivoConsolidadoPagamento(dados, DateTime.Now, calculadora, arquivo);
+                } 
+            }
 
         }
     }

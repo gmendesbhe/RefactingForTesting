@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RefactingForTesting
 {
-    public interface IEscreveArquivo
+    public interface IEscreveArquivo: IDisposable
     {
         void WriteLine(string aLine);
     }

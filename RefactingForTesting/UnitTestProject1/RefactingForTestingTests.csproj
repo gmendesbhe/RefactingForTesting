@@ -59,6 +59,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="CalculaBonusTests.cs" />
+    <Compile Include="FuncionarioDadosTests.cs" />
     <Compile Include="ProcessaPagamentoTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

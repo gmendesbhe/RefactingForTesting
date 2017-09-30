@@ -20,5 +20,27 @@ namespace RefactingForTesting
         {
             return this._Reader.ReadLine();
         }
+
+        #region IDisposable Support
+        private bool disposed = false; // To detect redundant calls
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    this._Reader.Dispose();
+                }
+
+                disposed = true;
+            }
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+        #endregion
     }
 }

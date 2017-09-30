@@ -9,11 +9,11 @@ namespace RefactingForTesting
 {
     public class FabricaDados
     {
-        public FuncionarioDados Dados
+        public IFuncionarioDados Dados
         {
             get
             {
-                var leitor = new LerArquivo(new StreamReader(@"..\func.csv"));
+                var leitor = new LerArquivo(new StreamReader(@"..\..\..\..\func.csv"));
                 return new FuncionarioDados(leitor);
             }
         }
