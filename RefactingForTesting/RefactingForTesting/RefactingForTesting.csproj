@@ -44,7 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AFabricaCalculadora.cs" />
+    <Compile Include="AFabricaWriter.cs" />
     <Compile Include="EscreverArquivo.cs" />
+    <Compile Include="AFabricaDados.cs" />
     <Compile Include="FabricaCalculadora.cs" />
     <Compile Include="FabricaWriter.cs" />
     <Compile Include="LerArquivo.cs" />

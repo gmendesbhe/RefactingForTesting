@@ -12,9 +12,9 @@ namespace RefactingForTesting
         static void Main(string[] args)
         {
             var proc = new ProcessaPagamento();
-            var dados = new FabricaDados().Dados;
-            var arquivo = new FabricaWriter().Writer;
-            var calculadora = new FabricaCalculadora().Calculadora;
+            var dados = AFabricaDados.Instance.Dados;
+            var arquivo = AFabricaWriter.Instance.Writer;
+            var calculadora = AFabricaCalculadora.Instance.Calculadora;
             using (dados)
             {
                 using (arquivo)

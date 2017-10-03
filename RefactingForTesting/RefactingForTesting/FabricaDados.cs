@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace RefactingForTesting
 {
-    public class FabricaDados
+    public class FabricaDados:AFabricaDados
     {
-        public IFuncionarioDados Dados
+        public override IFuncionarioDados Dados
         {
             get
             {

@@ -2,9 +2,9 @@
 
 namespace RefactingForTesting
 {
-    public class FabricaWriter
+    public class FabricaWriter:AFabricaWriter
     {
-        public IEscreveArquivo Writer
+        public override IEscreveArquivo Writer
         {
             get
             {

@@ -2,9 +2,9 @@
 
 namespace RefactingForTesting
 {
-    public class FabricaCalculadora
+    public class FabricaCalculadora:AFabricaCalculadora
     {
-        public ICalculaBonus Calculadora
+        public override ICalculaBonus Calculadora
         {
             get
             {
