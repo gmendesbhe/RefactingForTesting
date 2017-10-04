@@ -14,7 +14,13 @@ namespace RefactingForTesting
             var proc = new ProcessaPagamento();
             var dados = AFabricaDados.Instance.Dados;
             var arquivo = AFabricaWriter.Instance.Writer;
-            var calculadora = AFabricaCalculadora.Instance.Calculadora;
+            //var calculadora = AFabricaCalculadora.Instance.Calculadora;
+            var calcBuilder = ACalculadoraBuilder.Instance;
+            calcBuilder.Bonus10();
+            calcBuilder.Bonus3();
+            calcBuilder.Bonus5();
+            calcBuilder.BonusGeral();
+            var calculadora = calcBuilder.Build();
             using (dados)
             {
                 using (arquivo)
