@@ -11,7 +11,7 @@ namespace RefactingForTesting
     {
         static void Main(string[] args)
         {
-            var proc = new ProcessaPagamento();
+            var proc = AProcessaPagamentoFabrica.Instance.processaPagamento;
             var dados = AFabricaDados.Instance.Dados;
             var arquivo = AFabricaWriter.Instance.Writer;
             //var calculadora = AFabricaCalculadora.Instance.Calculadora;

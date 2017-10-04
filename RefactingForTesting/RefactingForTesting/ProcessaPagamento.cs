@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RefactingForTesting
 {
-    public class ProcessaPagamento
+    public class ProcessaPagamento:IProcessaPagamento
     {
 
         public void GerarArquivoConsolidadoPagamento(IFuncionarioDados dados, DateTime DataHj, ICalculaBonus aCalculaBonus, IEscreveArquivo gravarArquivo)

@@ -47,11 +47,13 @@
     <Compile Include="ACalculadoraBuilder.cs" />
     <Compile Include="AFabricaCalculadora.cs" />
     <Compile Include="AFabricaWriter.cs" />
+    <Compile Include="AProcessaPagamentoFabrica.cs" />
     <Compile Include="CalculadoraBuilder.cs" />
     <Compile Include="EscreverArquivo.cs" />
     <Compile Include="AFabricaDados.cs" />
     <Compile Include="FabricaCalculadora.cs" />
     <Compile Include="FabricaWriter.cs" />
+    <Compile Include="IProcessaPagamento.cs" />
     <Compile Include="LerArquivo.cs" />
     <Compile Include="Bonus10anos.cs" />
     <Compile Include="Bonus3anos.cs" />
@@ -65,6 +67,7 @@
     <Compile Include="IEscreveArquivo.cs" />
     <Compile Include="ILerArquivo.cs" />
     <Compile Include="ProcessaPagamento.cs" />
+    <Compile Include="ProcessaPagamentoFabrica.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
